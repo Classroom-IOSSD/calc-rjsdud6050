@@ -9,10 +9,10 @@ int main(){
 
 	fp = fopen("read.txt","r");
 	if(fp!=NULL){
-		fscanf(fp, "%d", &line);
+		fscanf(fp, "%f", &line);
 	
 		for(int i=1; i<line; i++) {
-			fscanf(fp, "%d %c %d",&operand1, &operator, &operand2);
+			fscanf(fp, "%f %c %f",&operand1, &operator, &operand2);
 			switch(operator) {
 				case '+':
 				result = add(operand1, operand2);
@@ -22,7 +22,7 @@ int main(){
 				break;
 				case '*':
 				result = mul(operand1, operand2);
-				break
+				break;
 				case '/':
 				result = div(operand1, operand2);
 				break;
